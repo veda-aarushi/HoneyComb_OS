@@ -12,7 +12,7 @@ import 'dart:io' show Platform;
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // ✅ Load .env before anything else
+  // ✅ Load environment variables
   try {
     await dotenv.load(fileName: ".env");
     print("✅ .env loaded");
@@ -20,16 +20,14 @@ Future<void> main() async {
     print("❌ Failed to load .env file: $e");
   }
 
+  // ✅ Initialize Firebase safely
   try {
-    final apps = Firebase.apps;
-    if (apps.isEmpty) {
-      if (Platform.isAndroid || Platform.isIOS) {
-        await Firebase.initializeApp(
-          options: DefaultFirebaseOptions.currentPlatform,
-        );
-      } else {
-        await Firebase.initializeApp(); // macOS, Windows, Linux, Web
-      }
+    if (Firebase.apps.isEmpty) {
+      await Firebase.initializeApp(
+        options: Platform.isAndroid || Platform.isIOS
+            ? DefaultFirebaseOptions.currentPlatform
+            : null,
+      );
     } else {
       print("🔥 Firebase already initialized");
     }
@@ -37,7 +35,7 @@ Future<void> main() async {
     print("🔥 Firebase initialization error: $e\n$stack");
   }
 
-
+  // ✅ Set up service locator
   await setupLocator();
 
   runApp(MySkylineApp());

@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "com.example.my_updated_flashcard_app"
-    compileSdk = flutter.compileSdkVersion
+    compileSdk = 35
     ndkVersion = flutter.ndkVersion
 
     compileOptions {
@@ -15,13 +15,13 @@ android {
     }
 
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_1_8
+        jvmTarget = "1.8"
     }
 
     defaultConfig {
         applicationId = "com.example.my_updated_flashcard_app"
-        minSdk = flutter.minSdkVersion
-        targetSdk = flutter.targetSdkVersion
+        minSdk = 23
+        targetSdk = 35
         versionCode = flutter.versionCode
         versionName = flutter.versionName
     }
@@ -31,16 +31,11 @@ android {
             signingConfig = signingConfigs.debug
         }
     }
-
-    // Set the minSdkVersion to 23 here
-    defaultConfig {
-        minSdkVersion 23
-    }
 }
 
 flutter {
     source = "../.."
 }
 
-// Apply the Google Services plugin at the bottom of the file
-apply plugin: 'com.google.gms.google-services'  // Add this line at the end of the file
+// ✅ Apply Google Services plugin at the bottom
+apply plugin: 'com.google.gms.google-services'
