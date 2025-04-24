@@ -1,0 +1,46 @@
+name: skyline_template_app
+description: A template for Skyline CS students.
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.18.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.0
+  firebase_core: ^3.13.0
+  firebase_auth: ^5.3.4
+  cloud_firestore: ^5.5.1
+  flip_card: ^0.7.0
+  flutter_dropdown: ^1.0.0+hotfix.1
+  photofilters: ^3.0.1
+  image_picker: ^1.1.2
+  permission_handler: ^11.3.1
+  firebase_core_web: ^2.22.0
+  auto_size_text: ^3.0.0
+  flutter_dotenv: ^5.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  get_it: ^7.1.4
+  english_words: ^4.0.0
+  faker: ^2.0.0
+  stacked: ^3.2.0
+  flutter_platform_widgets: ^7.0.1
+  flutter_launcher_icons: 0.11.0
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/logo3.png"
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
+    - .env
+
