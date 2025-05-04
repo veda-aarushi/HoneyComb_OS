@@ -41,6 +41,10 @@ Unlike typical flashcard apps, HoneyComb_OS doesn't just quiz you — it *learns
 | Architecture  | MVVM (Model-View-ViewModel)   |
 
 ---
+### Views
+![image](https://github.com/user-attachments/assets/6c74b411-d3fb-46ee-9ce8-57efe0df2997)
+![image](https://github.com/user-attachments/assets/caa3718a-097e-47c2-98f7-cce827dc8f5f)
+
 
 🚀 Getting Started
 
