@@ -1,0 +1,15 @@
+echo ".dart_tool/
+.packages
+build/
+ios/Flutter/Flutter.framework
+android/.gradle
+.idea/
+.vscode/
+*.iml
+flutter_export_environment.sh
+*.lock
+pubspec.lock
+.env
+assets/branding/*.xcf
+*.log
+" > .gitignore
