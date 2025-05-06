@@ -42,9 +42,15 @@ Unlike typical flashcard apps, HoneyComb_OS doesn't just quiz you — it *learns
 
 ---
 ### Views
-![image](https://github.com/user-attachments/assets/6c74b411-d3fb-46ee-9ce8-57efe0df2997)
-![image](https://github.com/user-attachments/assets/caa3718a-097e-47c2-98f7-cce827dc8f5f)
-
+![image](https://github.com/user-attachments/assets/3213db82-8d95-4051-a241-7eec06814910)
+![image](https://github.com/user-attachments/assets/1e2b11c0-6308-4ec7-8929-817e3b8dc996)
+![image](https://github.com/user-attachments/assets/b6f738d4-912a-423d-ac80-55d76828f09e)
+![image](https://github.com/user-attachments/assets/85ebdee7-d5be-483c-a4b2-38f1926ff491)
+![image](https://github.com/user-attachments/assets/acfa9441-22af-498c-a309-5fedc04d99da)
+![image](https://github.com/user-attachments/assets/ece4529f-8885-48cd-926a-7166c1a41726)
+![image](https://github.com/user-attachments/assets/10f0ba93-af16-49b9-9bd1-aa4b7e6feb89)
+![image](https://github.com/user-attachments/assets/0a3bc402-ce1c-45de-af20-940c7a339872)
+![image](https://github.com/user-attachments/assets/f002874f-2c76-43a1-99c9-3521d9692701)
 
 🚀 Getting Started
 
