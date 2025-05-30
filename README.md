@@ -1,18 +1,24 @@
-@@ -1,16 +1,66 @@
+# 🐻 HoneyComb\_OS
 
+> **A cozy, bear‑themed flashcard app that learns *****with***** you**
 
-# my_updated_flashcard_app
+HoneyComb\_OS combines a comforting visual style with AI‑powered spaced‑repetition to make studying feel less like a chore and more like a warm cup of honey‑infused tea.
 
+---
 
-# 🐻 HoneyComb_OS: A Bear-Themed AI-Powered Flashcards App for Focused Learning
+## ✨ Features
 
+| Category                | Highlights                                                                                                            |
+| ----------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| **AI‑Powered Learning** | • Detects struggle patterns and resurfaces weak cards automatically• Adapts intervals using spaced‑repetition science |
+| **Memory Game Mode**    | Transform review sessions into a playful matching game that reinforces recall                                         |
+| **Bear‑Inspired UI**    | Calming honeycomb palette & charming bear mascots reduce study anxiety                                                |
+| **Organized Lessons**   | Create unlimited lessons / decks, all synced to Firestore                                                             |
+| **Secure & Private**    | Only you control your data • Google Auth optional                                                                     |
 
+---
 
-
-A new Flutter project.
-
-
-**HoneyComb_OS** is a warm and whimsical bear-themed flashcard app built with Flutter — combining the charm of cozy UI with the intelligence of AI-driven learning.
+## 🖼 Screenshots
 
 
 
@@ -45,209 +51,101 @@ A new Flutter project.
 ![image](https://github.com/user-attachments/assets/f002874f-2c76-43a1-99c9-3521d9692701)
 
 
-
-
-## Getting Started
-
-
-Unlike typical flashcard apps, HoneyComb_OS doesn't just quiz you — it *learns from you*. Using AI to detect which cards you struggle with most, it applies **spaced repetition** techniques to optimize your long-term memory retention.
-
-
-
-
-This project is a starting point for a Flutter application.
-
-
 ---
-
-
-
-
-A few resources to get you started if this is your first Flutter project:
-
-
-## ✨ Features
-
-
-
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-
-
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-
-### 🧠 AI-Powered Learning Insights
-
-
-- Tracks your interactions with each flashcard to detect struggle patterns.
-
-
-- AI intelligently surfaces weaker cards more frequently for review.
-
-
-- Learns and adapts to your progress — just like a smart study buddy.
-
-
-
-
-For help getting started with Flutter development, view the
-
-
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-
-
-samples, guidance on mobile development, and a full API reference.
-
-
-### 🐾 Bear-Inspired UI & UX
-
-
-- Delightful bear and honeycomb visual themes.
-
-
-- Soothing interface designed to reduce anxiety and make studying fun.
-
-
-- Clean, accessible layouts optimized for mobile learning.
-
-
-
-
-
-### 🎮 Memory Game Mode
-
-
-- Match cards in an engaging, interactive game.
-
-
-- Strengthens recall and adds joy to the review process.
-
-
-- Great for visual and kinesthetic learners.
-
-
-
-
-
-### 📚 Organized Lessons
-
-
-- Create your own lessons and decks.
-
-
-- All data is securely stored in Firebase Firestore.
-
-
-- Seamlessly browse, select, and study any topic.
-
-
-
-
-
----
-
-
-
-
 
 ## 🛠 Tech Stack
 
-
-
-
-
-| Layer         | Tech                          |
-
-
-|---------------|-------------------------------|
-
-
-| Frontend      | Flutter (Dart)                |
-
-
-| Backend       | Firebase Firestore, Firebase Auth |
-
-
-| AI Engine     | Local + OpenAI-influenced logic (via `flutter_dotenv`) |
-
-
-| Storage       | Firestore (Lessons, Cards)    |
-
-
-| Architecture  | MVVM (Model-View-ViewModel)   |
-
-
-
-
+| Layer            | Technologies                                       |
+| ---------------- | -------------------------------------------------- |
+| **Frontend**     | Flutter (Dart)                                     |
+| **Backend**      | Firebase Firestore · Firebase Auth                 |
+| **AI Engine**    | Local inference + OpenAI (via **flutter\_dotenv**) |
+| **Storage**      | Firestore collections (Lessons & Cards)            |
+| **Architecture** | MVVM (Model · View · ViewModel)                    |
 
 ---
 
-
-
-
-
-🚀 Getting Started
-
-
-
-
+## 🚀 Getting Started
 
 ```bash
+# 1. Clone
+$ git clone https://github.com/veda-aarushi/HoneyComb_OS.git
+$ cd HoneyComb_OS
 
+# 2. Install dependencies
+$ flutter pub get
 
-git clone https://github.com/veda-aarushi/HoneyComb_OS.git
+# 3. Run the app (emulator or device)
+$ flutter run
+```
 
+### Prerequisites
 
-cd HoneyComb_OS
+* Flutter 3.19+ with Dart 3
+* A configured Firebase project (see `firebase/`)
 
+---
 
-flutter pub get
+## 🔐 Environment Variables
 
+Create a `.env` file in the project root (never commit this file):
 
-flutter run
+```ini
+OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+```
 
+Add `.env` to your `.gitignore` to keep your key safe.
 
+---
 
+## 📁 Project Structure
 
-
-🔐 .env Setup
-
-
-To enable optional AI-based features:
-
-
-OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxx
-
-
-
-
-
-📁 Folder Structure
-
-
-bash
-
-
-Copy
-
-
-Edit
-
-
+```
 lib/
+├── model/         # Data classes: FlashCard, Lesson, User
+├── view/          # UI widgets: flashcards, memory game, navigation
+├── viewmodel/     # Learning logic, spaced repetition, routing
+├── services/      # Firebase wrappers, AI engine hooks
+└── utils/         # Themes, constants, helper functions
+```
 
+---
 
-├── model/              # FlashCard, Lesson, User models
+## 🛣 Roadmap
 
+*
 
-├── view/               # Flashcard UI, Memory game, Navigation views
+---
 
+## 🤝 Contributing
 
-├── viewmodel/          # Learning logic, spaced repetition, routing
+1. Fork the repo
+2. Create your feature branch (`git checkout -b feat/amazing-feature`)
+3. Commit changes (`git commit -m 'feat: Add amazing feature'`)
+4. Push to branch (`git push origin feat/amazing-feature`)
+5. Open a Pull Request
 
+All PRs require passing CI and at least one approval.
 
-├── services/           # Firebase integration, AI engine hooks
+---
 
+## 📜 License
 
-├── utils/              # Themes, constants, helpers
+HoneyComb\_OS is released under the MIT License — see `LICENSE` for details.
+
+---
+
+Made with 🐻 & 🍯 by **Veda Aarushi** and contributors.
+
+---
+
+## 🗺 Roadmap
+
+| Release                         | Target Date     | Key Deliverables                                                                                        |                       ----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **v0.1 “Cub”**                  | **May 2025 ✓**  | • Flutter scaffold & theming<br>• Firebase Auth sign‑in/out<br>• Bear mascot & honey palette                                                                 |
+| **v0.2 “Hive”**                 | **Jun 2025 ✓**  | • Flashcard CRUD (create/edit/delete)<br>• Memory‑Game MVP<br>• Firestore schema finalized                                                                   |
+| **v0.3 “Forager”**              | **Jul 2025**    | • On‑device spaced‑repetition engine (Hive cache)<br>• Basic AI insight service (local heuristics)<br>• Dark‑mode & accessibility polish              |
+| **v0.5 “Swarm” – Closed Beta**  | **15 Aug 2025** | • Play Store internal testing release<br>• In‑app onboarding & permission flows<br>• Crashlytics + basic analytics                                            |
+| **v0.8 “Keeper” – Public Beta** | **Sep 2025**    | • AI‑powered weak‑card resurfacing<br>• Lesson sharing (read‑only)<br>• Offline progress sync                                                                 |
+| **v1.0 “Harvest” – Stable**     | **Oct 2025**    | • Full multi‑user lesson creation & sharing<br>• Themed study streaks & gamification<br>• CI/CD → GitHub Actions + Firebase App Distribution                  |
+| **v1.x Future**                 | *TBD*           | • Dual‑Password (normal vs. decoy)<br>• AI‑Decoy Mode (fake UI, silent SOS)<br>• Social “study hive” real‑time sessions<br>• Export flashcards to Anki/CSV |
